@@ -45,6 +45,16 @@
 			"export default $3;"
 		]
 	},
+	"React Styled component": {
+		"prefix": "rstd",
+		"body": [
+			"import styled from 'styled-components';\n",
+			"const $1 = styled.$2`",
+			"\t$3",
+			"`;\n",
+			"export default $1;"
+		]
+	},
 	"Storybook": {
 		"prefix": "stb",
 		"body": [

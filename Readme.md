@@ -54,6 +54,18 @@ const $3 = () => {
 export default $3;
 ```
 
+* rstd (React Styled component)
+
+```
+import styled from 'styled-components';
+
+const $1 = styled.$2`
+  $3
+`;
+
+export default $1;
+```
+
 ## Storybook
 
 * `stb` (Storybook default)
