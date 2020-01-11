@@ -2,19 +2,19 @@
 
 ## React
 
-* imr (Import React) 
+* `imr` (Import React) 
 
 ```
 import React from 'react';
 ```
 
-* exd (Export default component)
+* `exd` (Export default component)
 
 ```
 export { default } from './$1';
 ```
 
-* rcc (React class component)
+* `rcc` (React class component)
 
 ```
 import React from 'react';
@@ -35,7 +35,7 @@ class $3 extends React.Component {
 export default $3;
 ```
 
-* rsc (React stateless component)
+* `rsc` (React stateless component)
 
 ```
 import React from 'react';
@@ -56,7 +56,7 @@ export default $3;
 
 ## Storybook
 
-* stb (Storybook default)
+* `stb` (Storybook default)
 
 ```
 import React from 'react';
@@ -69,7 +69,7 @@ storiesOf('$2', module).add('default', () => (
 ));
 ```
 
-* stbc (Storybook core components)
+* `stbc` (Storybook core components)
 
 ```
 import React from 'react';
@@ -84,7 +84,7 @@ storiesOf('components/core/$1', module).add('default', () => (
 
 ## Jest
 
-* jst (Jest create snapshot test)
+* `jst` (Jest create snapshot test)
 
 ```
 import React from 'react';
@@ -102,7 +102,7 @@ describe('$1', () => {
 });
 ```
 
-* desc (Describe block) 
+* `desc` (Describe block) 
 
 ```
 describe('$1', () => {
@@ -112,7 +112,7 @@ describe('$1', () => {
 });
 ```
 
-* it (It block)
+* `it` (It block)
 
 ```
 it('$1', () => {
