@@ -1,133 +1,138 @@
 # Visual Studio Code Snippets
 
-## React
+## Table of Contents
 
-* `imr` (Import React) 
+- [CSS](#CSS)
 
-```
-import React from 'react';
-```
+<h2 id="CSS">Global CSS</h2>
 
-* `exd` (Export default component)
+### Tab trigger
 
 ```
-export { default } from './$1';
+!
 ```
 
-* `rcc` (React class component)
+### Output
 
 ```
-import React from 'react';
-import styled from 'styled-components';
+@import url('design-tokens.css');
 
-const $1 = styled.$2`
-  $4
-`;
-
-class $3 extends React.Component {
-  render() {
-    return (
-      <$1>$5</$1>
-    )
-  }
+/* ================================
+            Global styles
+   ================================ */
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
-export default $3;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  line-height: var(--line-height-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+input {
+  border-width: 1px;
+  border-style: solid;
+}
+
+input,
+button,
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+img {
+  max-width: 100%;
+}
 ```
 
-* `rsc` (React stateless component)
+## Design tokens
+
+### Tab trigger
 
 ```
-import React from 'react';
-import styled from 'styled-components';
-
-const $1 = styled.$2`
-  $4
-`;
-
-const $3 = () => {
-  return (
-    <$1>$5</$1>
-  )
-};
-
-export default $3;
+tokens
 ```
 
-* rstd (React Styled component)
+### Output
 
 ```
-import styled from 'styled-components';
+:root {
+  /* Colors */
+  --color-dark: #000;
+  --color-white: #fff;
 
-const $1 = styled.$2`
-  $3
-`;
+  /* Font Family */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family-monospace: 'Courier New', Courier, monospace;
 
-export default $1;
-```
+  /* Font Weight */
+  --font-weight-normal: 400;
+  --font-weight-bold: 800;
 
-## Storybook
+  /* Font Size */
+  --font-size-1: 0.75rem;  /* 12px */
+  --font-size-2: 0.875rem; /* 14px */
+  --font-size-3: 1rem;     /* 16px */
+  --font-size-4: 1.25rem;  /* 20px */
+  --font-size-5: 1.5rem;   /* 24px */
+  --font-size-6: 1.75rem;  /* 28px */
+  --font-size-7: 2rem;     /* 32px */
+  --font-size-8: 2.625rem; /* 42px */
 
-* `stb` (Storybook default)
+  /* Line Height */
+  --line-height-base: 1.5;
 
-```
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+  /* Border Radius */
+  --border-radius-medium: 0.25rem;
+  --border-radius-large: 0.5rem;
+  --border-radius-circle: 50%;
 
-import $1 from './$1';
+  /* Spacing */
+  --spacing-1: 0.25rem; /* 4px  */
+  --spacing-2: 0.5rem;  /* 8px  */
+  --spacing-3: 1rem;    /* 16px */
+  --spacing-4: 1.5rem;  /* 24px */
+  --spacing-5: 3rem;    /* 48px */
 
-storiesOf('$2', module).add('default', () => (
-  <$1></$1>
-));
-```
-
-* `stbc` (Storybook core components)
-
-```
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-
-import $1 from './$1';
-
-storiesOf('components/core/$1', module).add('default', () => (
-  <$1>$2</$1>
-));
-```
-
-## Jest
-
-* `jst` (Jest create snapshot test)
-
-```
-import React from 'react';
-import '@testing-library/react';
-
-import $1 from './$1';
-
-describe('$1', () => {
-  it('snapshot', () => {
-    const { asFragment } = renderWithTheme(
-      <$1>$2</$1>
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
-```
-
-* `desc` (Describe block) 
-
-```
-describe('$1', () => {
-  it('$2', () => {
-    $3
-  });
-});
-```
-
-* `it` (It block)
-
-```
-it('$1', () => {
-  $2
-});
+  /* Z-index */
+  --zindex-default: 1;
+  --zindex-popup: 500;
+  --zindex-dialog: 600;
+  --zindex-dropdown: 700;
+  --zindex-overlay: 800;
+  --zindex-modal: 900;
+}
 ```
